@@ -1,7 +1,14 @@
-import React from 'react'
+import type {Guitar} from '../types'
 
-const Guitar = ({guitar,addToCart}) => {
-    const {name,price,id,description,image}=guitar
+type GuitarProps ={
+    guitar:Guitar,
+    addToCart:(item:Guitar)=>void
+}
+
+
+const Guitar = ({guitar,addToCart}:GuitarProps) => {
+    
+    const {name,price,description,image}=guitar
     
     return (
     <div className="col-md-6 col-lg-4 my-4 row align-items-center">

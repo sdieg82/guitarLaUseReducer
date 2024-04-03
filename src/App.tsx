@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import Guitar from "./components/Guitar";
 import useCart from "./hooks/useCart";
@@ -7,6 +8,8 @@ function App() {
  
   const { data,cart,addToCart,removeFromCart,decreaseQuantity,increaseQuantity,clearCart,
         isEmpty,cartTotal}= useCart()
+
+  const [auth,setAuth]=useState(false)
 
   return (
     <> 
