@@ -24,6 +24,7 @@ export type CartActions=
     )=>{
 
         if (action.type==='add-to-cart') {
+           console.log('desde add to cart')
             return{
                 ...state
             }
